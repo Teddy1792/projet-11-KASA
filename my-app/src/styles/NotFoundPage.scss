@@ -1,0 +1,50 @@
+@import 'Color';
+
+.error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .errorNumber{
+        margin-top: 80px;
+        margin-bottom: 0px;
+        font-weight: 700;
+        font-size: 288px;
+    }
+    
+    .errorMessage{
+        margin-top: 0px;
+        margin-bottom: 80px;
+        font-weight: 500;
+        font-size: 36px;
+    }
+}
+
+a{
+    &:visited{ color: $base-color }
+
+    .homePage{
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .error{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .errorNumber{
+            font-size: 96px;
+        }
+    
+        .errorMessage{
+            font-size: 18px;
+        }
+    }
+
+}

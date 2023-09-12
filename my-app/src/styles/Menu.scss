@@ -1,0 +1,109 @@
+@import 'Color';
+
+.dropdown {
+    width: 40vw;
+    min-width: 330px;
+    position: relative; // Added for positioning pseudo-element
+
+    &.opened::before {
+        content: ""; // Create the pseudo-element
+        position: absolute; // Absolute positioning
+        top: 20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #F6F6F6;
+        z-index: -1; // Place behind the content
+        border-radius: 10px;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        width: 40vw;
+        min-width: 330px;
+        background-color: $base-color;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .dropdown-menu {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        line-height: 25.67px;
+        font-weight: 400;
+        font-size: 18px;
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        z-index: 1;
+
+        &.show {
+            max-height: 500px;
+            opacity: 1;
+        }
+    }
+
+    .arrowMenu {
+        transition: transform 0.3s ease;
+    }
+    
+    .down {
+        transform: rotate(180deg);
+    }
+    
+    .up {
+        transform: rotate(0deg);
+    }
+    
+
+    // Styles specific to pageType="Apropos"
+    &.Apropos {
+        width: 100%;
+
+        .dropdown-toggle {
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        &.opened::before {
+            border-radius: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .dropdown {
+        width: 40vw;
+        min-width: 100%;
+        margin-top: 10px;
+    
+        .dropdown-toggle {
+            width: 100%;
+            min-width: 330px;
+            margin-top: 0px;
+        }
+    }
+
+    body .menusApropos{
+        margin: 0px;
+        width: 100%;
+    }
+    .dropdown .dropdown-toggle{
+        font-weight: 500;
+    }
+    .dropdown .dropdown-menu{
+        font-weight: 400;
+    }
+}

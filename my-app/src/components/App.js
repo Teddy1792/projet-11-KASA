@@ -1,15 +1,12 @@
-import '../styles/App.css';
+import '../styles/App.scss';
+import React from 'react';
+import { CustomRouter} from './CustomRouter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Premier test JS !
-        </p>
-          Learn React
-      </header>
-    </div>
+      <div className="App">
+        <CustomRouter />
+      </div>
   );
 }
 

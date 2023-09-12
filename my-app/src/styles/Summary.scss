@@ -1,0 +1,109 @@
+@import 'Color';
+
+.summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .titleContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        h1{
+            font-size: 36px;
+            font-weight: 500;
+            margin: 0px;
+        }
+    
+        h2{
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0px;
+        }
+    }
+    
+    .host{
+        display: flex;
+        flex-direction: column;
+        .hostText{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 18px;
+    
+            img{
+                border-radius: 100px;
+                margin-left: 20px;
+                height: 60px;
+            }
+        }
+    
+        .stars{
+            margin-top: 20px;
+            .star{
+                margin-left: 10px;
+            }
+    
+            .filled{
+                height: 25px;
+                color: $base-color;
+            }
+    
+            .unfilled{
+                height: 25px;
+                color: #E3E3E3;
+            }
+        }
+    }
+    
+    .tags{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+
+        .tag{
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-color: $base-color;
+            border-radius: 10px;
+            padding-top: 5px;
+            min-width: 115px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-right: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .summary{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .titleContainer{
+            h1{
+                font-size: 18px;
+            }
+        
+            h2{
+                font-size: 14px;
+            }
+        }
+    
+        .host{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    }
+
+    .summary .host .stars .filled{
+        height: 18px;
+    }
+}
