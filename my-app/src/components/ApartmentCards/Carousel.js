@@ -32,3 +32,6 @@ export function Carousel(props) {
         </div>
     );
 }
+
+
+//corriger mobile tags
