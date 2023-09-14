@@ -1,10 +1,8 @@
-import { Header } from './Header';
 import { Banner } from './Banner';
 import bannerImage from '../img/banner2.png'
 import React from 'react';
 import { Menu } from './Menu';
 import '../styles/Apropos.scss';
-import { Footer } from './Footer';
 
 export function Apropos() {
     const fiabilite = [{ label:"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."}];
@@ -13,7 +11,6 @@ export function Apropos() {
     const sercurite = [{ label:"La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."}];
     return (
         <>
-            <Header />
             <Banner text="" imgSrc={bannerImage} />
             <div className='menusApropos'>
                 <Menu title="Fiabilité" items={fiabilite} pageType="Apropos" />
@@ -21,7 +18,6 @@ export function Apropos() {
                 <Menu title="Service" items={service} pageType="Apropos" />
                 <Menu title="Sécurité" items={sercurite} pageType="Apropos" />
             </div>
-            <Footer/>
         </>
     );
 }

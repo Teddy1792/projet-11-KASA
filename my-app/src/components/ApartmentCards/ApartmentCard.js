@@ -1,4 +1,3 @@
-import { Header } from '../Header';
 import { Carousel } from './Carousel';
 import { Summary } from './Summary';
 import { Menu } from '../Menu'
@@ -6,7 +5,6 @@ import apartments from '../../files/logements.json';
 import { useParams } from 'react-router-dom';
 import '../../styles/ApartmentCard.scss';
 import { NotFoundPage } from '../NotFoundPage';
-import { Footer } from '../Footer';
 
 
 export function ApartmentCard() {
@@ -31,14 +29,12 @@ export function ApartmentCard() {
 
     return (
         <>
-            <Header />
             <Carousel pictures={pictures} />
             <Summary />
             <div className='menusCard'>
                 <Menu title="Description" items={descriptionAsItem} pageType="ApartmentCard" />
                 <Menu title="Equipments" items={equipmentsAsItems} pageType="ApartmentCard" />
             </div>
-            <Footer/>
         </>
     );
 }
