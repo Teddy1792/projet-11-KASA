@@ -12,14 +12,12 @@ export function Header() {
                 <NavLink 
                     to="/" 
                     className="text-accueil" 
-                    activeClassName="active"
                 >
                     Accueil
                 </NavLink>
                 <NavLink 
                     to="/Apropos" 
                     className="text-apropos" 
-                    activeClassName="active"
                 >
                     A Propos
                 </NavLink>
